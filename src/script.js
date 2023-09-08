@@ -31,13 +31,6 @@ let dateNtime,country, date,time, hour, min, sec, hourdegree, mindegree, secdegr
 let response, getresponse,url
 
 
-// seconds tick sound
-const tick = new Audio('ticking-clock_1-27477.mp3')
-function tickplay() {
-  tick.play()
-}
-
-
 // Fetch API from abstract website for date and time
 //Compete  actual URL                             :<-----------------query parameters-------------->
 //https://timezone.abstractapi.com/v1/current_time/?api_key=f53fa390428e45cea2bce7dc6df67cd2&location=NY,%20US
@@ -127,8 +120,7 @@ setInterval(() => {
     }
     secdegree = String(sec * 6) + "deg"
     secselector.style.transform = ` rotate(${secdegree}) `
-    // call tick sound every second of rotation of second hand
-    tickplay()
+
   }
   
 }, 999);
